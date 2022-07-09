@@ -8,10 +8,11 @@ interface ISectionProps {
     value: string;
     highlightTitle?: boolean;
     highlightValue?: boolean;
+    testID?: string;
 };
 
-const Section: FC<ISectionProps> = ({ title, value, highlightTitle = false, highlightValue = false }) => (
-    <View style={SectionStyles.container}>
+const Section: FC<ISectionProps> = ({ title, value, highlightTitle = false, highlightValue = false, testID }) => (
+    <View style={SectionStyles.container} testID={testID}>
         <View style={[SectionStyles.titleContainer, highlightTitle && SectionStyles.highlight]}>
             <Text style={SectionStyles.title}>{title}</Text>
         </View>

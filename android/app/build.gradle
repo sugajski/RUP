@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
+import org.apache.tools.ant.taskdefs.condition.Os
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -166,6 +167,8 @@ android {
                 }
             }
         }
+        testBuildType System.getProperty('testBuildType', 'debug')
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     if (isNewArchitectureEnabled()) {
@@ -235,6 +238,8 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+             // Detox-specific additions to pro-guard
+            proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
         }
     }
 
@@ -258,6 +263,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
@@ -277,13 +284,15 @@ dependencies {
     }
 
     if (enableHermes) {
-        //noinspection GradleDynamicVersion
+       //noinspection GradleDynamicVersion
         implementation("com.facebook.react:hermes-engine:+") { // From node_modules
             exclude group:'com.facebook.fbjni'
         }
     } else {
         implementation jscFlavor
     }
+
+    androidTestImplementation('com.wix:detox:+')
 }
 
 if (isNewArchitectureEnabled()) {
@@ -293,7 +302,7 @@ if (isNewArchitectureEnabled()) {
     configurations.all {
         resolutionStrategy.dependencySubstitution {
             substitute(module("com.facebook.react:react-native"))
-                    .using(project(":ReactAndroid"))
+                                        .using(project(":ReactAndroid"))
                     .because("On New Architecture we're building React Native from source")
             substitute(module("com.facebook.react:hermes-engine"))
                     .using(project(":ReactAndroid:hermes-engine"))

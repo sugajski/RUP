@@ -23,6 +23,7 @@ export const UserRow: FC<IUserRowProps> = ({ user, index, onPress }) => {
                 !isLast && UserRowStyles.bottomBorder,
             ]}
             onPress={onPress}
+            testID={`userRow${index}`}
         >
             <Image source={{ uri: user.picture.large }} style={UserRowStyles.image} />
             <Text style={UserRowStyles.name}>{user.name.first} {user.name.last}</Text>

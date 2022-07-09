@@ -8,7 +8,7 @@ import WelcomeStyles from './WelcomeStyles';
 
 const Welcome = () => (
     <SafeAreaView style={WelcomeStyles.container}>
-        <Text style={WelcomeStyles.screenTitle}>{Localization.t('welcomeTitle')}</Text>
+        <Text style={WelcomeStyles.screenTitle} testID='welcomeScreenTitle'>{Localization.t('welcomeTitle')}</Text>
         <NumberButtonsTable />
     </SafeAreaView>
 );

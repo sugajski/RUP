@@ -38,7 +38,7 @@ const UserDetails: FC<UserDetailsProps> = ({ navigation, route }) => {
                 <View style={UserDetailsStyles.detailsContainer}>
                     <Section title={Localization.t('userDetailsName')} value={formattedName} highlightValue />
                     <Section title={Localization.t('userDetailsLastname')} value={formattedLastname} highlightTitle />
-                    <Section title={Localization.t('userDetailsAge')} value={formattedAge} highlightValue />
+                    <Section title={Localization.t('userDetailsAge')} value={formattedAge} highlightValue testID='ageSection' />
                     <Section title={Localization.t('userDetailsBirthDate')} value={formattedBirthDate} highlightTitle />
                     <Section title={Localization.t('userDetailsPhone')} value={formattedPhone} highlightValue />
                     <Section title={Localization.t('userDetailsEmail')} value={formattedEmail} highlightTitle />

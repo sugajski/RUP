@@ -12,7 +12,7 @@ interface IBackButtonProps {
 export const BackButton: FC<IBackButtonProps> = ({ onPress }) => {
     const insets = useSafeAreaInsets();
     return (
-        <TouchableOpacity style={[BackButtonStyles.container, { top: insets.top + 20 }]} onPress={onPress}>
+        <TouchableOpacity style={[BackButtonStyles.container, { top: insets.top + 20 }]} onPress={onPress} testID='backButton'>
             <Image source={images.arrow} style={BackButtonStyles.icon} />
         </TouchableOpacity>
     );

@@ -30,7 +30,7 @@ const TableButton: FC<ITableButtonProps> = ({ button }) => {
     }
 
     return (
-        <TouchableOpacity key={button.number} onPress={() => pressNumber(button.number)}>
+        <TouchableOpacity key={button.number} onPress={() => pressNumber(button.number)} testID={`numberButton${button.number}`}>
             <View
                 style={[
                     TableButtonStyles.container,
