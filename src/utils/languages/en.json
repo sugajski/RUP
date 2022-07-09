@@ -1,3 +1,5 @@
 {
-    "welcomeTitle": "How many randomly generated identities do you want to download?"
+    "welcomeTitle": "How many randomly generated identities do you want to download?",
+    "usersListPlaceholder": "We were unable to download the identites. Do you want to try again?",
+    "tryAgain": "TRY AGAIN"
 }

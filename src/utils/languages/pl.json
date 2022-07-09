@@ -1,3 +1,5 @@
 {
-    "welcomeTitle": "Ile losowo wygenerowanych tożsamości chcesz pobrać?"
+    "welcomeTitle": "Ile losowo wygenerowanych tożsamości chcesz pobrać?",
+    "usersListPlaceholder": "Nie udało nam się pobrać tożsamości. Czy chcesz spróbować ponownie?",
+    "tryAgain": "SPRÓBUJ PONOWNIE"
 }
