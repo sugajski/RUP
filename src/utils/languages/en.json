@@ -1,5 +1,12 @@
 {
     "welcomeTitle": "How many randomly generated identities do you want to download?",
+    "userDetailsName": "Name",
+    "userDetailsLastname": "Lastname",
+    "userDetailsAge": "Age",
+    "userDetailsBirthDate": "Date of birth",
+    "userDetailsPhone": "Phone number",
+    "userDetailsEmail": "Email",
+    "userDetailsAddress": "Address",
     "usersListPlaceholder": "We were unable to download the identites. Do you want to try again?",
     "tryAgain": "TRY AGAIN"
 }

@@ -1,7 +1,6 @@
 import { StyleSheet, TextStyle, ViewStyle } from "react-native";
 
 import { colors } from "../../../../utils/Colors";
-import { fonts } from "../../../../utils/Fonts";
 import { metrics } from "../../../../utils/Metrics";
 import { FontWeight } from "../../../../utils/Types";
 

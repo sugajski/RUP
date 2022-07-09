@@ -1,5 +1,12 @@
 {
     "welcomeTitle": "Ile losowo wygenerowanych tożsamości chcesz pobrać?",
+    "userDetailsName": "Imię",
+    "userDetailsLastname": "Nazwisko",
+    "userDetailsAge": "Wiek",
+    "userDetailsBirthDate": "Data urodzenia",
+    "userDetailsPhone": "Numer telefonu",
+    "userDetailsEmail": "Email",
+    "userDetailsAddress": "Adres",
     "usersListPlaceholder": "Nie udało nam się pobrać tożsamości. Czy chcesz spróbować ponownie?",
     "tryAgain": "SPRÓBUJ PONOWNIE"
 }

@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from 'react';
-import { ActivityIndicator, BackHandler, FlatList, Text, View } from 'react-native';
+import { ActivityIndicator, BackHandler, FlatList, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -30,7 +30,7 @@ const UsersList: FC<UsersListProps> = ({ navigation }) => {
 
     const getUsers = () => dispatch(fetchUsers(numberOfUsers) as any);
 
-    const pressUserRow = (user: IUserProps) => console.log('Pressed user: ', user);
+    const pressUserRow = (user: IUserProps) => navigation.navigate('UserDetails', { user });
 
     return (
         <SafeAreaView style={UsersListStyles.container}>
